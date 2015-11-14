@@ -27,6 +27,9 @@ gulp.task('templates', function () {
     var YOUR_LOCALS = {};
 
     gulp.src('./assets/template/**/*.jade')
+        .pipe(plumber({
+            errorHandler: errorAlert
+        }))
         .pipe(jade({
             locals: YOUR_LOCALS,
             pretty: true
@@ -80,7 +83,7 @@ gulp.task('watch', function () {
 
 function errorAlert(error) {
     notify.onError({
-        title: "JS/SASS Error",
+        title: "JS/SASS/JADE Error",
         message: "Check your terminal",
         sound: "Sosumi"
     })(error); //Error Notification

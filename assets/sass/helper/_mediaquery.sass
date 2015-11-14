@@ -2,17 +2,22 @@
 =desktopS
     @media only screen and (min-width: 1024px) and (max-width: 1366px)
         @content
+
+
 //TABLET
+
+
+
 
 
 =ipadorient($orient)
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: $orient)
         @content
-        
+
 =fortablet
     @media only screen and (min-width: 768px) and (max-width: 1023px)
         @content
-        
+
 =forstablet
     @media only screen and (min-width: 601px) and (max-width: 767px)
         @content
@@ -21,7 +26,7 @@
 =iphone
     @media only screen and (min-device-width : 320px) and (max-device-width : 667px) and (-webkit-min-device-pixel-ratio: 2)
         @content
-        
+
 =iphoneorient($orient)
     @media only screen and (min-device-width : 375px) and (max-device-width : 667px) and (orientation: $orient)
         @content
@@ -29,13 +34,17 @@
 =formobileO($orient)
     @media only screen and (min-width: 0) and (max-width: 600px) and (orientation: $orient)
         @content
-        
+
 =formobile
     @media only screen and (min-width: 0) and (max-width: 767px)
         @content
-        
-        
+
+
 //ALL FIREFOX TARGET
 =firefox
     @-moz-document url-prefix()
         @content
+
+
+
+

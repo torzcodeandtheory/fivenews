@@ -1,8 +1,9 @@
 //Calc
-=calc($property, $expression)
+=calcu($property, $expression)
     #{$property}: -moz-calc(#{$expression})
     #{$property}: -webkit-calc(#{$expression})
     #{$property}: calc(#{$expression})
+
 
 //ASPECT RATIO
 =aspect-ratio($width, $height)
@@ -20,7 +21,7 @@
         bottom: 0
         z-index: 1
 
-        
+
 //CSS3 MIX
 =bradius($bradius...)
     -moz-border-radius: $bradius
@@ -28,14 +29,14 @@
     -ms-border-radius: $bradius
     -o-border-radius: $bradius
     border-radius: $bradius
-    
+
 =transitionspeed($time...)
     -moz-transition: $time
     -webkit-transition: $time
     -ms-transition: $time
     -o-transition: $time
     transition: $time
-    
+
 =transform($trans...)
     -moz-transform: $trans
     -webkit-transform: $trans
@@ -49,22 +50,22 @@
     -ms-transform-style: $tstyle
     -o-transform-style: $tstyle
     transform-style: $tstyle
-    
+
 =scale($scale...)
     @include transform(scale($scale))
-        
+
 =rotate($deg)
     @include transform(rotate($deg))
-        
+
 =rotateY($deg2)
     @include transform(rotateY($deg2))
-        
+
 =rotateX($deg2)
     @include transform(rotateY($deg2))
 
 =translate($transP,  $transD)
     @include transform(translate$transP($transD))
-    
+
 =boxshadow($bshadow)
     -moz-box-shadow: $bshadow
     -webkit-box-shadow: $bshadow
@@ -76,7 +77,7 @@
     -moz-appearance: $appearance
     -webkit-appearance: $appearance
     appearance: $appearance
-    
+
 =mboxshadow($mshadow...)
     -moz-box-shadow: $mshadow
     -webkit-box-shadow: $mshadow
@@ -90,14 +91,14 @@
     -ms-text-shadow: $tshadow
     -o-text-shadow: $tshadow
     text-shadow: $tshadow
-    
+
 =borderbox
     -moz-box-sizing: border-box
     -webkit-box-sizing: border-box
     -ms-box-sizing: border-box
     -o-box-sizing: border-box
     box-sizing: border-box
-    
+
 =sticky
     position: -webkit-sticky
     position: sticky
@@ -117,9 +118,9 @@
     opacity: $opacity
     $opacity-ie: $opacity * 100
     filter: alpha(opacity=$opacity-ie)
-    
-        
-        
+
+
+
 =aspect-ratio($width, $height)
     position: relative
     &:before
@@ -134,31 +135,31 @@
         right: 0
         bottom: 0
 
-        
+
 
 //GRADIENT
 =lineargradient($lgradient...)
-    background: -moz-linear-gradient($lgradient) 
-    background: -webkit-linear-gradient($lgradient) 
-    background: -ms-linear-gradient($lgradient) 
-    background: -o-linear-gradient($lgradient) 
-    background: linear-gradient($lgradient) 
-    
+    background: -moz-linear-gradient($lgradient)
+    background: -webkit-linear-gradient($lgradient)
+    background: -ms-linear-gradient($lgradient)
+    background: -o-linear-gradient($lgradient)
+    background: linear-gradient($lgradient)
+
 =radialgradient($lgradient...)
-    background: -moz-radial-gradient($lgradient) 
-    background: -webkit-radial-gradient($lgradient) 
-    background: -ms-radial-gradient($lgradient) 
-    background: -o-radial-gradient($lgradient) 
-    background: radial-gradient($lgradient) 
-        
+    background: -moz-radial-gradient($lgradient)
+    background: -webkit-radial-gradient($lgradient)
+    background: -ms-radial-gradient($lgradient)
+    background: -o-radial-gradient($lgradient)
+    background: radial-gradient($lgradient)
+
 //black and white
 =filter($filter, $val)
     -moz-filter: $filter($val)
     -ms-filter: $filter($val)
     -webkit-filter: $filter($val)
     filter: $filter($val)
-    
-    
+
+
 =animation($animname)
     -moz-animation: $animname
     -webkit-animation: $animname
@@ -179,7 +180,7 @@
     animation-play-state: paused$imp
 
 =keyframes($name)
-    
+
     @-moz-keyframes #{$name}
         @content
 
@@ -188,7 +189,7 @@
 
     @-ms-keyframes #{$name}
         @content
-    
+
     @keyframes #{$name}
         @content
 
@@ -200,16 +201,16 @@
 //transition
 =ctransition($values...)
     $transitions: ()
-    @each $declaration in $values 
+    @each $declaration in $values
         $prop: nth($declaration, 1)
         $prop-opts: ()
         $length: length($declaration)
-        @for $i from 2 through $length 
-            $prop-opts: append($prop-opts, nth($declaration, $i)) 
-        
+        @for $i from 2 through $length
+            $prop-opts: append($prop-opts, nth($declaration, $i))
+
         $trans: ($prop, $prop-opts)
         $transitions: append($transitions, $trans, comma)
-    
+
 
     -webkit-transition: trans-prefix($transitions, webkit)
     -moz-transition: trans-prefix($transitions, moz)

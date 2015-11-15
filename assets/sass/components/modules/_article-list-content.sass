@@ -1,0 +1,106 @@
+.article-list-content
+	width: 100%
+	height: auto
+	overflow: hidden
+
+.article-list-box
+	list-style: none
+	padding: 0
+	margin: 0
+	display: block
+	width: 100%
+	height: auto
+	overflow: hidden
+
+	li
+		width: 50%
+		float: left
+		height: 600px
+		margin-bottom: 60px
+		+fortablet
+			width: 100%
+			float: none
+			margin-bottom: 20px
+		+formobile
+			width: 100%
+			float: none
+			margin-bottom: 20px
+
+		&:nth-child(odd)
+			padding-right: 14px
+			border-right: 1px $grey solid
+
+			+fortablet
+				border-right: 0
+				padding-right: 0
+			+formobile
+				border-right: 0
+				padding-right: 0
+
+
+		&:nth-child(even)
+			padding-left: 14px
+			+fortablet
+				padding-left: 0
+			+formobile
+				padding-left: 0
+
+		&:hover
+			.article-list-imagebox img
+				+transitionspeed(5s)
+				+transform(scale(1.1))
+
+.article-list-imagebox
+	margin-bottom: 20px
+	width: 100%
+	overflow: hidden
+	height: auto
+	position: relative
+
+	img
+		width: 100%
+		display: block
+		height: auto
+		display: block
+		+transitionspeed(5s)
+		+transform(scale(1))
+
+
+.article-title
+	font-family: $opensans
+	font-size: 20px
+	font-weight: 700
+	line-height: 30px
+	margin-bottom: 20px
+
+	a
+		color: $black
+		+transitionspeed(0.5s)
+		&:hover
+			color: $red
+			+transitionspeed(0.5s)
+
+.excerpt
+	font-family: $lora
+	font-size: 15px
+	line-height: 20px
+	margin-bottom: 20px
+
+.timestamp
+	font-family: $lora
+	font-size: 15px
+	line-height: 20px
+	color: $grey-dark
+	font-style: italic
+
+
+.loading-box
+	height: 180px
+	width: 100%
+	text-align: center
+	line-height: 180px
+	font-size: 18px
+	font-family: $lora
+	font-style: italic
+	color: $grey-dark-2
+

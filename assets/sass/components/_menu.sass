@@ -1,0 +1,559 @@
+//TOP MENU
+.topmenu
+	display: block
+	width: auto
+	float: left
+	height: 28px
+	margin-left: 60px
+	+fortablet
+		margin-left: 0
+	+formobile
+		margin-left: 0
+		float: none
+		overflow: hidden
+		height: auto
+
+
+	li
+		display: block
+		float: left
+		height: 28px
+		line-height: 28px
+		font-size: 12
+		+formobile
+			float: none
+
+
+		a
+			display: block
+			height: 12px
+			line-height: 12px
+			margin: 8px 0
+			padding: 0 10px
+			color: $white
+			font-family: $opensans
+			text-transform: uppercase
+			border-right: 1px $white solid
+			+formobile
+				border-right: 0 $white solid
+
+			.liveindicator
+				display: inline-block
+				width: 12px
+				height: 12px
+				background: $green
+				+bradius(50%)
+				margin-left: 5px
+
+		&:last-child
+			a
+				border-right: 0
+
+
+//SIGN IN
+.access
+	float: right
+	display: block
+	width: auto
+	background: $black-2
+	height: 28px
+	padding: 0 20px
+	margin-right: 40px
+	+fortablet
+		margin-right: 0
+	+formobile
+		float: none
+		margin-right: 0
+
+	li
+		display: block
+		float: left
+		+formobile
+			width: 50%
+			text-align: center
+		a
+			display: block
+			height: 12px
+			line-height: 12px
+			margin: 8px 0
+			padding: 0 10px
+			color: $white
+			font-family: $opensans
+			text-transform: uppercase
+			border-right: 1px $white solid
+
+		&:last-child
+				a
+					border-right: 0
+
+
+
+
+
+//LOGO
+.logo
+	display: block
+	float: left
+	width: 150px
+	height: 70px
+	background: $white
+	margin-top: 20px
+	+bradius(150px 150px 0 0 )
+	text-align: center
+	position: relative
+	+fortablet
+
+	+formobile
+		width: 90px
+		height: 45px
+		background: $white
+		margin-top: 5px
+		+bradius(90px 90px 0 0 )
+
+
+	img
+		display: block
+		position: relative
+		left: 50%
+		+transform(translateX(-50%))
+		top: 30px
+		+fortablet
+			height: 50px
+			width: auto
+			top: 15px
+
+		+formobile
+			height: 28px
+			width: auto
+			top: 10px
+
+.site-title
+	display: block
+	float: left
+	margin-left: 60px
+	line-height: 130px
+	height: 90px
+	+desktopS
+		display: none
+	+fortablet
+		display: block
+
+	+formobile
+		display: none
+
+
+
+//MAIN NAVIGATION
+.main-nav
+	height: 90px
+	float: left
+	min-width: 500px
+	margin-left: 90px
+	+desktopS
+		margin-left: 20px
+	+fortablet
+		position: relative
+		float: none
+		background: $red
+		+calcu(width,'100% + 40px')
+		margin-left: -20px
+		clear: both
+		overflow: hidden
+		height: auto
+		min-width: 0
+		max-height: 0
+		+transitionspeed(50ms)
+
+		&.slideDown
+			+transitionspeed(1s)
+			max-height: 1000px
+	+formobile
+		position: relative
+		float: none
+		background: $red
+		+calcu(width,'100% + 20px')
+		margin-left: -10px
+		clear: both
+		overflow: hidden
+		height: auto
+		min-width: 0
+		max-height: 0
+		+transitionspeed(50ms)
+
+		&.slideDown
+			+transitionspeed(1s)
+			max-height: 1000px
+
+	.nav
+		display: block
+		width: 100%
+		height: auto
+		margin: 0
+		padding: 52px 0 0
+		+fortablet
+			padding: 0 0
+		+formobile
+			padding: 0 0
+
+		& > li
+			display: block
+			float: left
+			padding: 0 20px 0
+			+fortablet
+				float: none
+				padding: 0
+				line-height: 38px
+			+formobile
+				float: none
+				padding: 0
+				line-height: 38px
+
+			& > a
+				color: $white
+				display: block
+				padding-bottom: 25px
+				position: relative
+				font-family: $opensans
+				font-weight: 600
+				text-align: center
+				+fortablet
+					padding: 0 20px
+					text-align: left
+				+formobile
+					padding: 0 20px
+					text-align: left
+
+				span
+					color: $red
+			&:hover,&.active
+				& > a
+					&:after
+						content: ''
+						display: block
+						width: 5px
+						height: 5px
+						background: $red
+						+bradius(50%)
+						position: absolute
+						left: 50%
+						+transform(translateX(-50%))
+						top: 20px
+						+formobile
+							display: none
+			&:hover
+				& > .submenu
+					display: block
+
+
+			.submenu
+				display: none
+				width: auto
+				overflow: hidden
+				position: absolute
+				//width: 100vw
+				//left: 50%
+				//+transform(translateX(-50%))
+				text-align: center
+				z-index: 9
+				margin-left: -20px
+				+fortablet
+					width: 100%
+					position: relative
+					margin-left: 0
+					background: $red-dark-2
+					overflow: hidden
+				+formobile
+					width: 100%
+					position: relative
+					margin-left: 0
+					background: $red-dark-2
+					overflow: hidden
+
+				li
+					display: inline-block
+					height: 56px
+					line-height: 56px
+					background: $red
+					padding: 0 20px
+					position: relative
+					+transitionspeed(1s)
+					+fortablet
+						display: block
+						height: 38px
+						line-height: 38px
+						text-align: left
+						padding-left: 40px
+						background: $red-dark-2
+					+formobile
+						display: block
+						height: 38px
+						line-height: 38px
+						text-align: left
+						padding-left: 40px
+						background: $red-dark-2
+
+					&:hover
+						+transitionspeed(1s)
+						background: $red-dark-3
+
+
+					&:after
+						content: ''
+						display: block
+						width: 10px
+						height: 100%
+						position: absolute
+						left: 100%
+						background: $red
+						top: 0
+						z-index: -1
+						+formobile
+							display: none
+					a
+						color: $white
+
+.main.fixed
+	.logo img
+		height: 50px
+		width: auto
+		top: 15px
+		+formobile
+			height: 28px
+			width: auto
+			top: 10px
+
+
+//SOCIAL
+.social
+	float: right
+	height: 90px
+	color: #fff
+	width: auto
+	overflow: hidden
+	line-height: 90px
+	font-size: 14px
+	text-align: center
+	+fortablet
+		display: none
+	+formobile
+		display: none
+
+	a
+		color: #fff
+		display: block
+		float: left
+		overflow: hidden
+		margin: 0
+		width: 25px
+		cursor: pointer
+		font-size: 20px
+
+		i
+			+transitionspeed(0.5s)
+
+		&:hover i.fa-facebook
+			color: #3b5998
+		&:hover i.fa-twitter
+			color: #4099ff
+
+	span
+		display: block
+		overflow: hidden
+		float: left
+		width: auto
+		max-width: 25px
+		+transitionspeed(0.5s)
+
+		&.open
+			max-width: 250px
+
+	.searchbox
+		float: left
+
+
+.mobile-social
+	display: none
+	+fortablet
+		display: block
+		width: 100%
+		height: 30px
+		overflow: hidden
+
+		a
+			display: block
+			float: left
+			width: 50%
+			text-align: center
+			height: 30px
+			line-height: 30px
+			color: $white
+			&.m-social--twitter
+				background: #4099ff
+			&.m-social--facebook
+				background: #3b5998
+	+formobile
+		display: block
+		width: 100%
+		height: 30px
+		overflow: hidden
+
+		a
+			display: block
+			float: left
+			width: 50%
+			text-align: center
+			height: 30px
+			line-height: 30px
+			color: $white
+			&.m-social--twitter
+				background: #4099ff
+			&.m-social--facebook
+				background: #3b5998
+
+
+//SEARCH
+.searchbox
+    display: block
+    margin: 30px auto
+    height: 30px
+    padding: 0 10px
+    border: 0
+    border: 0
+    +appearance(none)
+    +bradius(0)
+    +fortablet
+        margin: 10px auto
+        width: 100%
+        height: 30px
+        +borderbox
+    +formobile
+        margin: 10px auto
+        width: 100%
+        height: 30px
+        +borderbox
+
+.mobilesearch
+	display: none
+	+fortablet
+		display: block
+		+appearance(none)
+		+bradius(0)
+		border: 0
+		+calcu(width,'100% - 20px')
+		height: 40px
+		margin: 10px auto
+		padding: 0 20px
+	+formobile
+		display: block
+		+appearance(none)
+		+bradius(0)
+		border: 0
+		+calcu(width,'100% - 20px')
+		height: 40px
+		margin: 10px auto
+		padding: 0 20px
+
+
+
+//topnav for mobile
+.topnav
+	display: none
+	+formobile
+		display: block
+		height: 28px
+		text-align: center
+		color: $white
+		line-height: 28px
+		font-size: 20px
+
+.burgermenu
+	display: none
+	+fortablet
+		display: block
+		float: right
+		width: 30px
+		height: 20px
+		margin: 35px 0
+		position: relative
+
+		span
+			display: block
+			position: absolute
+			width: 100%
+			height: 3px
+			background: $white
+			+calcu(top,'50% - 2px')
+
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			width: 100%
+			height: 3px
+			background: $white
+			top: 0
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			width: 100%
+			height: 3px
+			background: $white
+			bottom: 0
+
+		&.open
+			span
+				display: none
+			&:before
+				+transform(rotate(45deg))
+				top: 50%
+			&:after
+				+transform(rotate(-45deg))
+				top: 50%
+	+formobile
+		display: block
+		float: right
+		width: 30px
+		height: 20px
+		margin: 15px 0
+		position: relative
+
+		span
+			display: block
+			position: absolute
+			width: 100%
+			height: 3px
+			background: $white
+			+calcu(top,'50% - 2px')
+
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			width: 100%
+			height: 3px
+			background: $white
+			top: 0
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			width: 100%
+			height: 3px
+			background: $white
+			bottom: 0
+
+		&.open
+			span
+				display: none
+			&:before
+				+transform(rotate(45deg))
+				top: 50%
+			&:after
+				+transform(rotate(-45deg))
+				top: 50%
+
+
+
+
+

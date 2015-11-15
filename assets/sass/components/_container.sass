@@ -1,0 +1,150 @@
+.container
+	width: 100%
+	height: auto
+	overflow: hidden
+	position: relative
+	padding: 0 0 0
+
+	+formobile
+		padding: 0 0 0
+
+.wrapper
+	width: 100%
+	max-width: 1366px
+	padding: 0 30px
+	margin: 0 auto
+	+fortablet
+		padding: 0 20px
+	+formobile
+		min-height: 0
+		padding: 0 10px
+
+//LEFT CONTAINER
+.content
+	width: 100%
+	float: left
+	+calcu(max-width,'100% - 330px')
+
+	+fortablet
+
+	+formobile
+		max-width: none
+
+
+//SIDEBAR
+.sidebar
+	width: 330px
+	float: left
+	padding-left: 30px
+
+	+formobile
+		max-width: none
+		padding-left: 0
+		width: 100%
+
+	.newsflash
+		margin-bottom: 40px
+		overflow: hidden
+		width: 100%
+
+		& > h1
+			display: block
+			background: $red
+			color: $white
+			height: 40px
+			line-height: 40px
+			text-align: center
+			margin-bottom: 15px
+			font-size: 20px
+			font-family: $opensans
+			font-weight: 600
+
+		ul
+			display: block
+			width: 100%
+			height: auto
+			overflow: hidden
+
+			li
+				display: block
+				height: auto
+				width: 100%
+				margin-bottom: 20px
+
+				&:hover
+					div img
+						+transitionspeed(5s)
+						+transform(scale(1.1))
+
+	.presinto
+		margin-bottom: 40px
+		overflow: hidden
+		width: 100%
+
+		& > h1
+			display: block
+			background: $black
+			color: $white
+			height: 40px
+			line-height: 40px
+			text-align: center
+			margin-bottom: 15px
+			font-size: 20px
+			font-family: $opensans
+			font-weight: 600
+
+			span
+				color: $red
+
+		ul
+			display: block
+			width: 100%
+			height: auto
+			overflow: hidden
+
+			li
+				display: block
+				height: auto
+				width: 100%
+				margin-bottom: 20px
+
+				&:hover
+					div img
+						+transitionspeed(5s)
+						+transform(scale(1.1))
+
+
+	.article-sidebar-image
+		width: 100%
+		height: auto
+		overflow: hidden
+		position: relative
+		margin-bottom: 20px
+
+		img
+			width: 100%
+			height: auto
+			display: block
+			position: relative
+			+transitionspeed(5s)
+			+transform(scale(1))
+
+	.sidebar-title
+		font-size: 20px
+		color: $black
+		font-family: $opensans
+		font-weight: 700
+
+		a
+			color: $black
+			+transitionspeed(0.5s)
+
+			&:hover
+				color: $red
+				+transitionspeed(0.5s)
+
+
+
+
+
+

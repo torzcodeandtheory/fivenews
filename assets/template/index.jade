@@ -1,5 +1,70 @@
-include layout/header.jade
+doctype html
+html(lang="en")
+	include layout/head
+	include mixins/ads
+	include mixins/article-list
+	body
+		//ADS LEADERBOARD
+		+ads-leaderboard
+		//Header
+		include layout/header.jade
+		+weather-radio-mobile
+		//content here
+		.container
+			.wrapper
+				.content
+					//Featured Article/Video
+					include modules/featured-article
+
+					//OPINION
+					include modules/opinion
+
+					//SENTI METER
+					include modules/senti-meter
+
+					//ADS
+					+ads-content
 
 
+					include modules/article-list-content
+
+
+				//SIDEBAR
+				.sidebar
+					//Weather
+					include modules/weather
+
+					//Radio
+					include modules/radio
+
+					//NewsFlash
+					.newsflash
+						h1.widget-title NEWSFLASH
+
+						ul
+							+article-list-sidebar
+
+					//Ads 300px
+					+ads-sidebar
+
+
+					//Presinto
+					.presinto
+						h1.widget-title Presinto
+							span 5
+
+						ul
+							+article-list-sidebar
+
+					//SOCIAL TAB
+					include modules/social-tabs-sidebar
+					//Ads 300px
+					+ads-sidebar
+
+
+
+
+
+		include layout/footer
 
 

@@ -1,0 +1,41 @@
+*,*::after, *::before
+	+borderbox
+
+.main
+	width: 100%
+	height: 118px
+	background: $black
+	margin-bottom: 100px
+	position: relative
+	+fortablet
+		height: auto
+		margin-bottom: 30px
+	+formobile
+		height: auto
+		margin-bottom: 0
+
+
+	&.fixed
+		position: fixed
+		left: 0
+		top: 0
+		z-index: 10
+
+	.topbar
+		width: 100%
+		height: 28px
+		background: $red-light-1
+
+		+formobile
+			overflow: hidden
+			height: auto
+			max-height: 28px
+			+transitionspeed(50ms)
+
+			&.slideDown
+				max-height: 1000px
+				+transitionspeed(1s)
+
+
+
+

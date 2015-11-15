@@ -1,0 +1,104 @@
+.ads-wide
+	background: $grey
+	height: 110px
+	padding: 10px 0
+	display: block
+	+formobile
+		padding: 10px
+
+.ads-box
+	width: 728px
+	height: 90px
+	margin: 0 auto
+
+	+formobile
+		width: 100%
+
+	&:after
+		content: 'LEADERBOARD'
+		display: block
+		width: 100%
+		height: 90px
+		line-height: 90px
+		text-align: center
+		color: $grey-dark
+		border: 1px $grey-dark solid
+
+
+
+.ads-content
+	height: 250px
+	width: 100%
+	padding: 80px 0
+	border-top: 1px $grey solid
+
+	.ads-box-content
+		width: 100%
+		max-width: 728px
+		height: 90px
+		margin: 0 auto
+		position: relative
+		line-height: 90px
+		text-align: center
+		color: $grey-light
+		background: $grey-dark
+		font-size: 60px
+		font-family: $opensans
+		font-weight: 900
+		+fortablet
+			width: 100%
+		+formobile
+			width: 100%
+
+		&:after
+			content: ''
+			display: block
+			width: 100%
+			height: 100%
+			position: absolute
+			z-index: -1
+			left: 0
+			top: 0
+
+
+.ads-sidebar
+	width: 100%
+	height: auto
+	overflow: hidden
+	margin-bottom: 52px
+
+	+formobile
+		width: 100vw
+		left: 50%
+		position: relative
+		+transform(translateX(-50%))
+		background: $grey-dark-2
+		+calcu(padding,'(100vw - 300px) / 2')
+		padding-top: 10px
+		padding-bottom: 10px
+
+.ads-box-sidebar
+	width: 100%
+	height: 250px
+	background: $grey
+	position: relative
+	line-height: 250px
+	text-align: center
+	color: $grey-light
+	background: $grey-dark
+	font-size: 60px
+	font-family: $opensans
+	font-weight: 900
+
+
+
+
+
+
+
+
+
+
+
+
+

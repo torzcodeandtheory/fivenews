@@ -1,0 +1,60 @@
+.footer
+	width: 100%
+	background: $black
+	height: 190px
+	margin: 0 auto
+	text-align: center
+	padding: 30px 0
+	color: $white
+	+formobile
+		padding: 30px 10px
+		height: auto
+
+.footer-menu
+	display: block
+	+formobile
+		float: left
+		width: 50%
+		margin-bottom: 20px
+	a
+		display: inline-block
+		padding: 0 15px
+		color: $white
+		font-weight: 600
+		font-family: $opensans
+
+		+formobile
+			display: block
+			text-align: left
+			padding: 5px 20px
+
+.footer-menu2
+	display: block
+	margin: 40px 0 20px
+	+formobile
+		float: left
+		width: 50%
+		margin: 0
+
+	a
+		display: inline-block
+		padding: 0 15px
+		color: $white
+		font-weight: 300
+		font-family: $opensans
+		+formobile
+			display: block
+			text-align: right
+			padding: 5px 20px
+
+		&:nth-child(1)
+			border-right: 1px $white solid
+			+formobile
+				border-right: 0
+
+.copyright
+	font-family: $opensans
+	clear: both
+
+
+

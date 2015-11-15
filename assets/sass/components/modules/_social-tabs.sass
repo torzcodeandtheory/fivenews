@@ -1,0 +1,41 @@
+.social-sidebar-tab
+	width: 100%
+	height: auto
+	overflow: hidden
+	margin-bottom: 20px
+
+	h2
+		display: block
+		float: left
+		height: 45px
+		width: 50%
+		line-height: 45px
+		background: $grey-light
+		text-align: center
+		cursor: pointer
+
+		.fa
+			color: $white
+			font-size: 20px
+
+		&:hover,&.active
+			&#facebook-tab
+				background: $facebook
+			&#twitter-tab
+				background: $twitter
+
+	> div
+		display: none
+		clear: both
+		height: auto
+		overflow: hidden
+	> div.active
+		display: block
+
+	.facebook-tab
+		width: 100%
+		border-top: 5px $facebook solid
+	.twitter-tab
+		width: 100%
+		border-top: 5px $twitter solid
+

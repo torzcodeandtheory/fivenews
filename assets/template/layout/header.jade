@@ -1,10 +1,81 @@
-doctype html
-html(lang="en")
-	head
-		title= pageTitle
-		link(rel='stylesheet' href='css/main.css').
 
-	body
-		header
-			h1.
-				header
+header.main
+	.topbar
+		.wrapper
+			a(class='topnav mobile')
+				i(class='fa fa-angle-double-down')
+
+			ul.topmenu
+				li: a(href='')
+					img(src='/css/img/home.png')
+				li: a(href='') live
+					span.liveindicator
+				li: a(href='') sports
+				li: a(href='') news
+				li: a(href='') entertainment
+				li: a(class='more') more
+
+			ul.access
+				li: a(href='') SINGUP
+				li: a(href='') LOG IN
+
+
+
+
+
+	.wrapper
+		.logo
+			img(src='/css/img/logo.png' alt)
+
+		.site-title
+			img(src='/css/img/site-title.png' alt)
+
+		a(class='burgermenu')
+			span
+
+		.main-nav
+			input(type='search' class='mobilesearch' placeholder='Search')
+			ul.nav
+				li.active
+					a(href='') Aksyon
+					ul.submenu
+						li: a(href='') Submenu
+
+				li
+					a(href='') Live
+					ul.submenu
+						li: a(href='') Submenu
+						li: a(href='') Submenu
+						li: a(href='') Submenu
+				li
+					a(href='') Kontrabando
+					ul.submenu
+						li: a(href='') Submenu
+						li: a(href='') Submenu
+						li: a(href='') Submenu
+				li
+					a(href='') Newroom
+						span 5
+					ul.submenu
+						li: a(href='') Submenu
+				li
+					a(href='') Factuals
+					ul.submenu
+						li: a(href='') Submenu
+
+			.mobile-social
+				a(class='m-social--facebook'): i(class='fa fa-facebook')
+				a(class='m-social--twitter'): i(class='fa fa-twitter')
+
+		.social
+			span
+				a(class='searchBtn')
+					i(class='fa fa-search')
+
+				input(class='searchbox' type='search' placeholder='Search')
+			a
+				i(class='fa fa-facebook')
+			a
+				i(class='fa fa-twitter')
+
+

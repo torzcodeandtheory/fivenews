@@ -4,6 +4,7 @@ $(document).ready(function () {
 	topmobileMenu();
 	radioPlay();
 	socialTab();
+	sentiShare();
 
 	setTimeout(function () {
 		sentiMeter();
@@ -90,5 +91,14 @@ function sentiMeter() {
 		});
 		$(this).siblings('.status').children('.status-rate').text(level + '%');
 
+	});
+}
+
+function sentiShare() {
+	$('.senti-fb,.senti-tw').on('click', function () {
+		$('.overlay').fadeIn();
+	});
+	$('.overlay').on('click', function () {
+		$(this).fadeOut();
 	});
 }

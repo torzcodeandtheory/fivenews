@@ -83,6 +83,16 @@ a {
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal; }
 
+.overlay {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9; }
+
 h1 {
   font-family: Arial;
   font-size: 24px;
@@ -1450,7 +1460,8 @@ h1 {
         .opinion-container ul li {
           float: none;
           width: 100%;
-          padding: 20px 0; } }
+          padding: 20px 0;
+          overflow: hidden; } }
       @media only screen and (min-width: 0) and (max-width: 767px) {
         .opinion-container ul li {
           float: none;
@@ -1780,11 +1791,16 @@ h1 {
     padding: 0;
     display: block;
     width: 100%;
-    height: 200px;
+    height: 250px;
     overflow: hidden;
     position: relative;
     left: 0;
-    bottom: 0; }
+    bottom: 0;
+    padding-top: 50px; }
+    @media only screen and (min-width: 0) and (max-width: 767px) {
+      .sentimeter ul {
+        padding-top: 100px;
+        height: 300px; } }
     .sentimeter ul li {
       display: block;
       width: 25%;
@@ -1819,6 +1835,11 @@ h1 {
           width: calc(50% - 20px);
           font-weight: 700;
           color: #e5e5e5; }
+          @media only screen and (min-width: 0) and (max-width: 767px) {
+            .sentimeter ul li .status .status-hash {
+              float: none;
+              text-align: center;
+              width: 100%; } }
         .sentimeter ul li .status .status-icon {
           display: block;
           height: 40px;
@@ -1826,6 +1847,11 @@ h1 {
           text-align: center;
           float: left;
           width: 40px; }
+          @media only screen and (min-width: 0) and (max-width: 767px) {
+            .sentimeter ul li .status .status-icon {
+              float: none;
+              text-align: center;
+              width: 100%; } }
         .sentimeter ul li .status .status-rate {
           display: block;
           height: 40px;
@@ -1836,6 +1862,11 @@ h1 {
           width: -webkit-calc(50% - 20px);
           width: calc(50% - 20px);
           color: #e5e5e5; }
+          @media only screen and (min-width: 0) and (max-width: 767px) {
+            .sentimeter ul li .status .status-rate {
+              float: none;
+              text-align: center;
+              width: 100%; } }
       .sentimeter ul li .share {
         display: block;
         width: 100%;

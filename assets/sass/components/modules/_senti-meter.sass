@@ -42,11 +42,15 @@
 		padding: 0
 		display: block
 		width: 100%
-		height: 200px
+		height: 250px
 		overflow: hidden
 		position: relative
 		left: 0
 		bottom: 0
+		padding-top: 50px
+		+formobile
+			padding-top: 100px
+			height: 300px
 
 		li
 			display: block
@@ -83,6 +87,10 @@
 					+calcu(width,'50% - 20px')
 					font-weight: 700
 					color: $grey
+					+formobile
+						float: none
+						text-align: center
+						width: 100%
 				.status-icon
 					display: block
 					height: 40px
@@ -90,6 +98,10 @@
 					text-align: center
 					float: left
 					width: 40px
+					+formobile
+						float: none
+						text-align: center
+						width: 100%
 				.status-rate
 					display: block
 					height: 40px
@@ -98,6 +110,10 @@
 					float: left
 					+calcu(width,'50% - 20px')
 					color: $grey
+					+formobile
+						float: none
+						text-align: center
+						width: 100%
 
 			.share
 				display: block

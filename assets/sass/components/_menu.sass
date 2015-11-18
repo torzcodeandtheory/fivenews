@@ -500,6 +500,7 @@
 			height: 3px
 			background: $white
 			top: 0
+			+transitionspeed(0.2s)
 		&:after
 			content: ''
 			display: block
@@ -508,14 +509,17 @@
 			height: 3px
 			background: $white
 			bottom: 0
+			+transitionspeed(0.2s)
 
 		&.open
 			span
 				display: none
 			&:before
+				+transitionspeed(0.2s)
 				+transform(rotate(45deg))
 				top: 50%
 			&:after
+				+transitionspeed(0.2s)
 				+transform(rotate(-45deg))
 				top: 50%
 	+formobile
@@ -542,6 +546,7 @@
 			height: 3px
 			background: $white
 			top: 0
+			+transitionspeed(0.2s)
 		&:after
 			content: ''
 			display: block
@@ -550,14 +555,17 @@
 			height: 3px
 			background: $white
 			bottom: 0
+			+transitionspeed(0.2s)
 
 		&.open
 			span
 				display: none
 			&:before
+				+transitionspeed(0.2s)
 				+transform(rotate(45deg))
 				top: 50%
 			&:after
+				+transitionspeed(0.2s)
 				+transform(rotate(-45deg))
 				top: 50%
 

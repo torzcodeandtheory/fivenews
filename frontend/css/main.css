@@ -1003,7 +1003,12 @@ h1 {
         width: 100%;
         height: 3px;
         background: #fff;
-        top: 0; }
+        top: 0;
+        -moz-transition: 0.2s;
+        -webkit-transition: 0.2s;
+        -ms-transition: 0.2s;
+        -o-transition: 0.2s;
+        transition: 0.2s; }
       .burgermenu:after {
         content: '';
         display: block;
@@ -1011,10 +1016,20 @@ h1 {
         width: 100%;
         height: 3px;
         background: #fff;
-        bottom: 0; }
+        bottom: 0;
+        -moz-transition: 0.2s;
+        -webkit-transition: 0.2s;
+        -ms-transition: 0.2s;
+        -o-transition: 0.2s;
+        transition: 0.2s; }
       .burgermenu.open span {
         display: none; }
       .burgermenu.open:before {
+        -moz-transition: 0.2s;
+        -webkit-transition: 0.2s;
+        -ms-transition: 0.2s;
+        -o-transition: 0.2s;
+        transition: 0.2s;
         -moz-transform: rotate(45deg);
         -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
@@ -1022,6 +1037,11 @@ h1 {
         transform: rotate(45deg);
         top: 50%; }
       .burgermenu.open:after {
+        -moz-transition: 0.2s;
+        -webkit-transition: 0.2s;
+        -ms-transition: 0.2s;
+        -o-transition: 0.2s;
+        transition: 0.2s;
         -moz-transform: rotate(-45deg);
         -webkit-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
@@ -1052,7 +1072,12 @@ h1 {
         width: 100%;
         height: 3px;
         background: #fff;
-        top: 0; }
+        top: 0;
+        -moz-transition: 0.2s;
+        -webkit-transition: 0.2s;
+        -ms-transition: 0.2s;
+        -o-transition: 0.2s;
+        transition: 0.2s; }
       .burgermenu:after {
         content: '';
         display: block;
@@ -1060,10 +1085,20 @@ h1 {
         width: 100%;
         height: 3px;
         background: #fff;
-        bottom: 0; }
+        bottom: 0;
+        -moz-transition: 0.2s;
+        -webkit-transition: 0.2s;
+        -ms-transition: 0.2s;
+        -o-transition: 0.2s;
+        transition: 0.2s; }
       .burgermenu.open span {
         display: none; }
       .burgermenu.open:before {
+        -moz-transition: 0.2s;
+        -webkit-transition: 0.2s;
+        -ms-transition: 0.2s;
+        -o-transition: 0.2s;
+        transition: 0.2s;
         -moz-transform: rotate(45deg);
         -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
@@ -1071,6 +1106,11 @@ h1 {
         transform: rotate(45deg);
         top: 50%; }
       .burgermenu.open:after {
+        -moz-transition: 0.2s;
+        -webkit-transition: 0.2s;
+        -ms-transition: 0.2s;
+        -o-transition: 0.2s;
+        transition: 0.2s;
         -moz-transform: rotate(-45deg);
         -webkit-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);

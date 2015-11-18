@@ -49,6 +49,10 @@
 			a
 				border-right: 0
 
+	.more
+		+formobile
+			display: none
+
 
 //SIGN IN
 .access
@@ -64,6 +68,8 @@
 	+formobile
 		float: none
 		margin-right: 0
+		margin-left: -10px
+		+calcu(width,'100% + 20px')
 
 	li
 		display: block
@@ -85,6 +91,8 @@
 		&:last-child
 				a
 					border-right: 0
+
+
 
 
 

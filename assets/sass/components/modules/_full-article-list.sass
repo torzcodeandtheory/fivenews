@@ -1,0 +1,58 @@
+.full-article-list
+	width: 100%
+	height: auto
+	overflow: hidden
+	padding-top: 30px
+	border-top: 1px $grey solid
+
+	.article-list-box
+		li
+			+calcu(width,'(100% / 3) - 28px')
+			+fortablet
+				width: 50%
+				float: left
+			+formobile
+				width: 100%
+				padding: 0
+			&:nth-child(odd)
+				padding-right: 0
+				border: 0
+				+fortablet
+					padding-right: 14px
+					border-right: 1px $grey solid
+				+formobile
+					width: 100%
+					padding: 0
+					border: 0
+			&:nth-child(even)
+				padding-left: 0
+				+fortablet
+					padding-left: 14px
+					border-left: 0 $grey solid
+				+formobile
+					width: 100%
+					padding: 0
+					border: 0
+
+			&.middle
+				+calcu(width,'36% - 28px')
+				margin: 0 14px
+				padding: 0 14px
+				border-right: 1px $grey solid
+				border-left: 1px $grey solid
+
+				+fortablet
+					width: 50%
+					margin: 0 0 60px 0
+					padding: 0 0 0 14px
+					border-right: 0 $grey solid
+					border-left: 0 $grey solid
+					&:nth-child(odd)
+						padding: 0 14px 0 0
+						border-right: 1px $grey solid
+				+formobile
+					width: 100%
+					padding: 0
+					border: 0
+					margin: 0
+

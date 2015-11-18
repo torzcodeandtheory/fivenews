@@ -9,13 +9,13 @@ html(lang="en")
 		+ads-leaderboard
 		//Header
 		include layout/header.jade
-		+weather-radio-mobile
 		//content here
 		.container
 			.wrapper
 				.content
-					//Featured Article/Video
-					include modules/featured-article
+
+					//VIDEO ARTICLE
+					include modules/video-article
 
 					//OPINION
 					include modules/opinion
@@ -26,21 +26,11 @@ html(lang="en")
 					//ADS
 					+ads-content
 
-
-					include modules/article-list-content
-
-
 				//SIDEBAR
 				.sidebar
-					//Weather
-					include modules/weather
-
-					//Radio
-					include modules/radio
-
-					//NewsFlash
-					.newsflash
-						h1.widget-title NEWSFLASH
+					//Default Sidebar
+					.default-sidebar
+						h1.widget-title RELATED STORIES
 
 						ul.sidebarlist
 							+article-list-sidebar
@@ -48,19 +38,20 @@ html(lang="en")
 					//Ads 300px
 					+ads-sidebar
 
-
-					//Presinto
-					.presinto
-						h1.widget-title Presinto
-							span 5
+					.default-sidebar
+						h1.widget-title MOST RECENT
 
 						ul.sidebarlist
 							+article-list-sidebar
 
-					//SOCIAL TAB
-					include modules/social-tabs-sidebar
+
+
+
 					//Ads 300px
 					+ads-sidebar
+
+				include modules/full-article-list
+
 
 
 

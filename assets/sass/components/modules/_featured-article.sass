@@ -47,7 +47,8 @@
 		top: 0
 		width: 100%
 		height: 100%
-		+boxshadow($black 0 -120px 100px inset)
+		+transitionspeed(2s)
+		//+boxshadow($black 0 -100px 200px inset)
 
 
 
@@ -55,7 +56,7 @@
 		width: 100%
 		height: auto
 		display: block
-		+transitionspeed(5s)
+		+transitionspeed(2s)
 		+transform(scale(1))
 		cursor: pointer
 
@@ -63,8 +64,11 @@
 
 
 	&:hover
+		&:after
+			+transitionspeed(2s)
+			+boxshadow($black 0 -100px 300px inset)
 		img
-			+transitionspeed(5s)
+			+transitionspeed(2s)
 			+transform(scale(1.1))
 .meta-report
 	+formobile

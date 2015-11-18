@@ -1,0 +1,35 @@
+doctype html
+html(lang="en")
+	include layout/head
+	include mixins/ads
+	include mixins/article-list
+	body
+
+		//ADS LEADERBOARD
+		+ads-leaderboard
+		//Header
+		include layout/header.jade
+		//content here
+		.container
+			.wrapper
+				.content-full
+				include modules/section-list
+				//ADS
+				+ads-content
+				//MOST RECENT
+				include modules/most-recent
+				//ADS
+				+ads-content
+
+
+
+				include modules/full-article-list
+
+
+
+
+
+
+		include layout/footer
+
+

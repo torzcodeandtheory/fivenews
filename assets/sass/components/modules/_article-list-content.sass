@@ -47,7 +47,8 @@
 
 		&:hover
 			.article-list-imagebox img
-				+transitionspeed(5s)
+				+transitionspeed(2s)
+				+imgfilter(blur(0))
 				+transform(scale(1.1))
 
 .article-list-imagebox
@@ -62,8 +63,11 @@
 		display: block
 		height: auto
 		display: block
-		+transitionspeed(5s)
+		+transitionspeed(2s)
 		+transform(scale(1))
+		+imgfilter(blur(1px))
+		+formobile
+			+imgfilter(blur(0))
 
 
 .article-title
@@ -103,4 +107,73 @@
 	font-family: $lora
 	font-style: italic
 	color: $grey-dark-2
+
+//MOST RECENT
+.thumbnail-list
+	margin: 40px 0 100px 0
+	padding: 0
+	display: block
+	overflow: hidden
+	+formobile
+		margin: 40px 0
+
+	li
+		display: block
+		float: left
+		width: 100%
+		max-width: 237px
+		+calcu(margin-right, '(100% / 4) - 1185px / 4')
+		overflow: hidden
+
+		+fortablet
+			width: 48%
+			max-width: none
+			margin-right: 4%
+			margin-bottom: 50px
+			&:nth-child(even)
+				margin-right: 0
+			&:nth-child(5)
+				display: none
+		+formobile
+			width: 48%
+			max-width: none
+			margin-right: 4%
+			margin-bottom: 30px
+			&:nth-child(even)
+				margin-right: 0
+			&:nth-child(5)
+				display: none
+
+
+		&:last-child
+			margin-right: 0
+		.small-thumbnail
+			width: 100%
+			height: auto
+			overflow: hidden
+			margin-bottom: 10px
+
+			img
+				width: 100%
+				height: auto
+				display: block
+				position: relative
+		.small-title
+			font-size: 20px
+			font-family: $opensans
+			line-height: 25px
+			font-weight: 700
+			margin-bottom: 10px
+			font-style: normal
+			text-transform: none
+
+			+fortablet
+				line-height: 20px
+			+formobile
+				font-size: 14px
+				line-height: 20px
+
+			a
+				color: $black
+
 

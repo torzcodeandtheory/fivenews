@@ -1,0 +1,169 @@
+.video-article
+	width: 100%
+	height: auto
+	position: relative
+
+
+	span.timestamp
+		margin-bottom: 30px
+		display: block
+
+	.video-title
+		font-family: $opensans
+		font-size: 60px
+		line-height: 70px
+		font-weight: 900
+		margin-bottom: 30px
+		color: $black
+		+desktopS
+			font-size: 30px
+			line-height: 30px
+			margin-bottom: 11px
+
+		+fortablet
+			font-size: 22px
+			line-height: 22px
+			margin-bottom: 11px
+
+		+formobile
+			font-size: 22px
+			line-height: 22px
+			margin-bottom: 11px
+
+	p
+		font-family: $lora
+		font-size: 15px
+		line-height: 20px
+		margin-bottom: 20px
+
+
+		a
+			color: $grey-dark-2
+			font-style: italic
+			+transitionspeed(1s)
+
+			&:hover
+				+transitionspeed(1s)
+				color: $red
+
+.video-container
+	width: 100%
+	+aspect-ratio(16,9)
+	margin-bottom: 40px
+
+	+formobile
+		width: 100vw
+		left: 50%
+		+transform(translateX(-50%))
+
+	&:hover
+		.acontent img
+			+imgfilter(grayscale(0))
+			+transitionspeed(2s)
+			+transform(scale(1.1))
+
+	span.live
+		width: auto
+		position: absolute
+		z-index: 8
+		background: $black
+		color: $red
+		height: 45px
+		line-height: 45px
+		padding: 0 40px
+		right: 0
+		top: 0
+		font-size: 20px
+		display: none
+
+	&.live
+		span.live
+			display: block
+
+
+	.acontent
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		z-index: 1
+		overflow: hidden
+
+		img
+			+imgfilter(grayscale(1))
+			width: 100%
+			+transitionspeed(2s)
+			+transform(scale(1))
+
+
+
+	iframe
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+
+	.playvideo
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 49px 0 49px 84px
+		border-color: transparent transparent transparent $white
+		position: absolute
+		display: block
+		left: 50%
+		top: 50%
+		+transform(translate(-50%,-50%))
+		z-index: 5
+		cursor: pointer
+		+transitionspeed(0.5s)
+
+		+formobile
+			border-width: 29px 0 29px 48px;
+		&:hover
+			+transitionspeed(0.5s)
+			border-color: transparent transparent transparent $red
+
+
+.sharebox
+	display: block
+	width: 100%
+	height: 32px
+	overflow: hidden
+	margin: 40px 0
+
+	span.share-cont
+		width: auto
+		float: left
+		height: 32px
+		background: $grey
+		line-height: 32px
+		margin-right: 20px
+
+	.fbshare-vid
+		background: $facebook
+		width: 32px
+		height: 32px
+		float: left
+		text-align: center
+		color: $white
+		font-size: 20px
+
+	.twshare-vid
+		background: $twitter
+		width: 32px
+		height: 32px
+		float: left
+		text-align: center
+		color: $white
+		font-size: 20px
+
+	span.share-count
+		padding: 0 10px
+		color: $grey-dark-2
+
+.comment-container
+	overflow: hidden
+	width: 100%

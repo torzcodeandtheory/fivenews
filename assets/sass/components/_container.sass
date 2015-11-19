@@ -72,7 +72,7 @@
 	+calcu(max-width,'100% - 330px')
 
 	+fortablet
-
+		+calcu(max-width,'100% - 310px')
 	+formobile
 		max-width: none
 
@@ -83,6 +83,10 @@
 	float: left
 	padding-left: 30px
 	position: relative
+	+fortablet
+		width: 310px
+		float: left
+		padding-left: 10px
 
 
 	+formobile

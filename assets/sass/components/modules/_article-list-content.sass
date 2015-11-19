@@ -135,9 +135,9 @@
 			&:nth-child(5)
 				display: none
 		+formobile
-			width: 48%
-			max-width: none
-			margin-right: 4%
+			width: 100%
+			+calcu(max-width,'100% / 2 - 10px')
+			margin-right: 20px
 			margin-bottom: 30px
 			&:nth-child(even)
 				margin-right: 0

@@ -20,6 +20,36 @@
 		left: 0
 		top: 0
 		z-index: 10
+		height: 50px
+		+formobile
+			height: auto
+
+		.topbar
+			display: none
+		.site-title
+			height: 50px
+			line-height: 55px
+		.social
+			height: 50px
+			line-height: 50px
+			.searchbox
+				margin: 10px 0
+		.burgermenu
+			+fortablet
+				margin: 15px 0
+		.main-nav
+			height: 50px
+			line-height: 50px
+			+fortablet
+				height: auto
+			+formobile
+				height: auto
+			.nav
+				padding: 0
+				a
+					padding-bottom: 0
+					&:after
+						display: none
 
 	.topbar
 		width: 100%

@@ -7,6 +7,7 @@ $(document).ready(function () {
 	socialTab();
 	sentiShare();
 	//socialTabfixed();
+	mobileMenuClick();
 
 
 	setTimeout(function () {
@@ -136,6 +137,23 @@ function socialTabfixed(){
 				marginTop: '0'
 			});
 		}
+	});
+}
+
+function mobileMenuClick() {
+	$('.nav li').each(function(){
+		$(this).on('click',function(){
+			if($(this).hasClass('open')){
+				$(this).removeClass('open');
+				$(this).children('.submenu').removeClass('open');
+
+			} else {
+				$(this).addClass('open');
+				$(this).children('.submenu').addClass('open');
+				$(this).siblings('li').children('.submenu').removeClass('open');
+				$(this).siblings('li').removeClass('open');
+			}
+		});
 	});
 }
 

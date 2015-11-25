@@ -211,10 +211,12 @@
 				float: none
 				padding: 0
 				line-height: 38px
+				overflow: hidden
 			+formobile
 				float: none
 				padding: 0
 				line-height: 38px
+				overflow: hidden
 
 			& > a
 				color: $white
@@ -227,9 +229,15 @@
 				+fortablet
 					padding: 0 20px
 					text-align: left
+					text-align: left
+					width: auto
+					float: left
 				+formobile
 					padding: 0 20px
 					text-align: left
+					width: auto
+					float: left
+
 
 				span
 					color: $red
@@ -246,11 +254,17 @@
 						left: 50%
 						+transform(translateX(-50%))
 						top: 20px
+						+fortablet
+							display: none
 						+formobile
 							display: none
 			&:hover
 				& > .submenu
 					display: block
+					+fortablet
+						display: none
+					+formobile
+						display: none
 
 
 			.submenu
@@ -319,12 +333,18 @@
 							display: none
 					a
 						color: $white
-
+				&.open
+					display: block
 .main.fixed
+	.logo
+		height: 45px
+		width: 90px
+		+bradius(50px 50px 0 0)
+		margin-top: 5px
 	.logo img
-		height: 50px
+		height: 30px
 		width: auto
-		top: 15px
+		top: 10px
 		+formobile
 			height: 28px
 			width: auto
